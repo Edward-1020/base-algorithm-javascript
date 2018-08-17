@@ -1,5 +1,5 @@
 class Array {
-    constructor (data) {
+    constructor (data = []) {
         this.data = data;
         this.size = this.data.length;
     }
