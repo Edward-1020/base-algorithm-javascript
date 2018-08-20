@@ -1,6 +1,6 @@
 class LinkedList {
     constructor () {
-        this.dummyHead = new this._Node();
+        this.dummyHead = new _Node();
         this.size = 0;
     }
 
@@ -13,7 +13,7 @@ class LinkedList {
     }
 
     add (index, e) {
-        if (index < 0 || index > size) {
+        if (index < 0 || index > this.size) {
             throw new Error(`add failed, Illegal index`);
         }
 
@@ -21,8 +21,7 @@ class LinkedList {
         for (let i = 0; i < index; i++) {
             prev = prev.next;
         }
-
-        prev.next = new this._Node(e, prev.next);
+        prev.next = new _Node(e, prev.next);
         this.size++;
     }
 
@@ -89,8 +88,13 @@ class LinkedList {
         return (this.size - 1);
     }
     
-    _Node (e = null, next = null) {
-        this.e = e;
-        this.next = next;
-    }
 }
+
+function _Node (e = null, next = null) {
+    this.e = e;
+    this.next = next;
+}
+
+module.exports = {
+    LinkedList
+};
