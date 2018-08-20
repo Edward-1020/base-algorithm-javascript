@@ -34,7 +34,7 @@ class LinkedList {
     }
 
     remove (index) {
-        if (index < 0 || index > size) {
+        if (index < 0 || index > this.size) {
             throw new Error(`remove failed, Illegal index`);
         }
         
@@ -53,11 +53,11 @@ class LinkedList {
     }
 
     removeFirst () {
-        this.remove(0);
+        return this.remove(0);
     }
 
     removeLast () {
-        this.remove(this.size - 1);
+        return this.remove(this.size - 1);
     }
 
     set (index, e) {
