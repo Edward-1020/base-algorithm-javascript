@@ -8,6 +8,7 @@ class Array {
         if (index < 0 || index > this.size) {
             throw new Error(`index is illegal`);
         }
+        this.data.push(null);
         for (let i = this.size - 1; i >= index; i--) {
             this.data[i + 1] = this.data[i] 
         }
@@ -30,8 +31,9 @@ class Array {
         for (let i = index + 1; i < this.size; i++) {
             this.data[i - 1] = this.data[i];
         }
-        this.data.pop();
+        const popData = this.data.pop();
         this.size = this.data.length;
+        return popData;
     }
 
     removeFirst () {
@@ -71,6 +73,10 @@ class Array {
             }
         }
         return -1;
+    }
+
+    isEmpty () {
+        return this.data.length === 0;
     }
 }
 

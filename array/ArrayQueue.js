@@ -17,3 +17,5 @@ class ArrayQueue {
         return this.array.getFirst();
     }
 }
+
+module.exports = {ArrayQueue};

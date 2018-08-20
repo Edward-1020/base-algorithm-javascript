@@ -39,18 +39,3 @@ class LoopQueue {
         return this.front === this.tail;
     }
 }
-
-const queue = new LoopQueue();
-queue.enqueue(1);
-queue.enqueue(2);
-queue.enqueue(3);
-queue.enqueue(4);
-queue.enqueue(5);
-queue.enqueue(6);
-queue.enqueue(7);
-queue.enqueue(8);
-queue.enqueue(9);
-queue.dequeue();
-queue.enqueue(10);
-queue.enqueue(11);
-console.log(queue);

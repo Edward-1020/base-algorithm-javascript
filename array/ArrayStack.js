@@ -16,7 +16,10 @@ class ArrayStack {
     peek () {
         return this.array.getLast();
     }
+
+    isEmpty () {
+        return this.array.isEmpty();
+    }
 }
 
-const testArray = new Array([1, 2, 3]);
-const arrayStack = new ArrayStack(testArray);
+module.exports = {ArrayStack};
