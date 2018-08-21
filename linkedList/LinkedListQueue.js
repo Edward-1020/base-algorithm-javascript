@@ -53,3 +53,5 @@ function _Node (e = null, next = null) {
     this.e = e;
     this.next = next;
 }
+
+module.exports = {LinkedListQueue};
