@@ -60,6 +60,19 @@ class LinkedList {
         return this.remove(this.size - 1);
     }
 
+    removeElement (e) {
+        let prev = this.dummyHead;
+        while (prev.next !== null) {
+            if (prev.next.e === e) {
+                break;
+            }
+            prev = prev.next;
+        }
+        let retNode = prev.next;
+        retNode.next = null;
+        prev.next = prev.next.next;
+    }
+
     set (index, e) {
         if (index < 0 || index > size) {
             throw new Error(`set failed, Illegal index`);

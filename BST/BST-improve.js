@@ -220,3 +220,7 @@ function _Node (e = null) {
     this.left = null;
     this.right = null;
 }
+
+module.exports = {
+    BST
+};
