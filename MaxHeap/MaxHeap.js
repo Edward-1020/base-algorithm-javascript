@@ -81,3 +81,7 @@ class MaxHeap {
         return ret;
     }
 }
+
+module.exports = {
+    MaxHeap
+};
